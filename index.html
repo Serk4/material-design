@@ -320,9 +320,12 @@
                 const phaseRad = (this.phaseShift * Math.PI) / 180;
                 
                 for (let iter = 0; iter < this.cycleCount; iter++) {
+                    // Euclidean distribution of beats
                     const euclideanPos = (iter * this.primeVal) % this.cycleCount;
+                    // Phase offset rotates positions around the circle
                     const rotatedPos = (euclideanPos + Math.floor((this.phaseShift / 360) * this.cycleCount)) % this.cycleCount;
                     
+                    // Phase also modulates intensity for visual variety
                     const intensity = Math.sin(((iter / this.cycleCount) * Math.PI * 2) + phaseRad) * 0.5 + 0.5;
                     
                     this.beatPositions.push({
@@ -407,7 +410,7 @@
             randomizeParameters() {
                 const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23];
                 const randomPrime = primes[Math.floor(Math.random() * primes.length)];
-                const randomCycle = 16 + Math.floor(Math.random() * 33);
+                const randomCycle = 8 + Math.floor(Math.random() * 57);
                 const randomPhase = Math.floor(Math.random() * 360);
                 const randomAmp = 40 + Math.floor(Math.random() * 60);
                 
