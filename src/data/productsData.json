@@ -1,0 +1,224 @@
+{
+	"products": [
+		{
+			"id": "EP001",
+			"orderNumber": 1,
+			"name": "Arduino Uno R3",
+			"description": "Microcontroller board based on the ATmega328P with USB interface",
+			"price": 24.99,
+			"category": "Microcontrollers",
+			"manufacturer": "Arduino",
+			"inStock": 45,
+			"specifications": {
+				"voltage": "5V",
+				"digitalPins": 14,
+				"analogPins": 6,
+				"flashMemory": "32KB"
+			},
+			"compatibleWidgets": [
+				"LED Matrix Display",
+				"Temperature Sensor",
+				"Servo Motor",
+				"Ultrasonic Sensor"
+			]
+		},
+		{
+			"id": "EP002",
+			"orderNumber": 2,
+			"name": "Raspberry Pi 4 Model B",
+			"description": "Single-board computer with quad-core ARM processor and built-in WiFi",
+			"price": 75.0,
+			"category": "Single Board Computers",
+			"manufacturer": "Raspberry Pi Foundation",
+			"inStock": 23,
+			"specifications": {
+				"ram": "4GB",
+				"cpu": "Quad-core ARM",
+				"usb": "4 ports",
+				"gpio": "40 pins"
+			},
+			"compatibleWidgets": [
+				"Camera Module",
+				"GPIO Expansion Board",
+				"Touch Display",
+				"HAT Modules"
+			]
+		},
+		{
+			"id": "EP003",
+			"orderNumber": 3,
+			"name": "ESP32 Development Board",
+			"description": "WiFi & Bluetooth enabled microcontroller for IoT applications",
+			"price": 12.5,
+			"category": "Wireless Modules",
+			"manufacturer": "Espressif",
+			"inStock": 67,
+			"specifications": {
+				"wifi": "802.11 b/g/n",
+				"bluetooth": "4.2",
+				"cpu": "Dual-core 240MHz",
+				"gpio": "30 pins"
+			},
+			"compatibleWidgets": [
+				"OLED Display",
+				"Temperature Sensor",
+				"Relay Module",
+				"Motion Detector"
+			]
+		},
+		{
+			"id": "EP004",
+			"orderNumber": 4,
+			"name": "Stepper Motor NEMA 17",
+			"description": "High precision bipolar stepper motor for 3D printers and CNC machines",
+			"price": 18.75,
+			"category": "Motors",
+			"manufacturer": "StepperOnline",
+			"inStock": 34,
+			"specifications": {
+				"steps": "200 per revolution",
+				"voltage": "12V",
+				"current": "1.68A",
+				"torque": "4.4 kg-cm"
+			},
+			"compatibleWidgets": [
+				"Stepper Driver A4988",
+				"Encoder Module",
+				"Limit Switch",
+				"Belt Drive System"
+			]
+		},
+		{
+			"id": "EP005",
+			"orderNumber": 5,
+			"name": "LCD Display 16x2",
+			"description": "Character LCD display with I2C interface and blue backlight",
+			"price": 8.99,
+			"category": "Displays",
+			"manufacturer": "Hitachi",
+			"inStock": 89,
+			"specifications": {
+				"characters": "16x2",
+				"interface": "I2C",
+				"backlight": "Blue LED",
+				"voltage": "5V"
+			},
+			"compatibleWidgets": [
+				"I2C Module",
+				"Keypad 4x4",
+				"Rotary Encoder",
+				"Push Buttons"
+			]
+		},
+		{
+			"id": "EP006",
+			"orderNumber": 6,
+			"name": "Ultrasonic Sensor HC-SR04",
+			"description": "Non-contact distance measurement sensor with 2cm to 400cm range",
+			"price": 3.25,
+			"category": "Sensors",
+			"manufacturer": "Generic",
+			"inStock": 156,
+			"specifications": {
+				"range": "2cm - 400cm",
+				"accuracy": "3mm",
+				"frequency": "40kHz",
+				"voltage": "5V"
+			},
+			"compatibleWidgets": [
+				"Arduino Uno",
+				"Distance Display",
+				"Alarm Module",
+				"Robot Platform"
+			]
+		},
+		{
+			"id": "EP007",
+			"orderNumber": 7,
+			"name": "Power Supply Module 5V 3A",
+			"description": "Switching power supply with over-current and thermal protection",
+			"price": 15.5,
+			"category": "Power Supplies",
+			"manufacturer": "Mean Well",
+			"inStock": 41,
+			"specifications": {
+				"output": "5V 3A",
+				"input": "100-240VAC",
+				"efficiency": "85%",
+				"protection": "OCP, OTP, SCP"
+			},
+			"compatibleWidgets": [
+				"LED Strips",
+				"Multiple Servos",
+				"Relay Banks",
+				"High Power Modules"
+			]
+		},
+		{
+			"id": "EP008",
+			"orderNumber": 8,
+			"name": "Breadboard 830 Points",
+			"description": "Solderless prototyping board with power rails and tie points",
+			"price": 5.99,
+			"category": "Prototyping",
+			"manufacturer": "Elegoo",
+			"inStock": 78,
+			"specifications": {
+				"tiePoints": "830",
+				"powerRails": "4",
+				"size": "165x55mm",
+				"material": "ABS Plastic"
+			},
+			"compatibleWidgets": [
+				"Jumper Wires",
+				"DIP Components",
+				"LED Arrays",
+				"Sensor Modules"
+			]
+		},
+		{
+			"id": "EP009",
+			"orderNumber": 9,
+			"name": "Servo Motor SG90",
+			"description": "Micro servo motor with 180-degree rotation and plastic gears",
+			"price": 4.5,
+			"category": "Motors",
+			"manufacturer": "Tower Pro",
+			"inStock": 92,
+			"specifications": {
+				"torque": "1.8 kg-cm",
+				"speed": "0.1s/60°",
+				"voltage": "4.8-6V",
+				"rotation": "180°"
+			},
+			"compatibleWidgets": [
+				"Servo Horn Set",
+				"Robot Arm Kit",
+				"Camera Gimbal",
+				"Steering Mechanism"
+			]
+		},
+		{
+			"id": "EP010",
+			"orderNumber": 10,
+			"name": "Temperature Sensor DS18B20",
+			"description": "Digital temperature sensor with 1-wire interface and waterproof probe",
+			"price": 6.25,
+			"category": "Sensors",
+			"manufacturer": "Maxim",
+			"inStock": 73,
+			"specifications": {
+				"range": "-55°C to +125°C",
+				"accuracy": "±0.5°C",
+				"interface": "1-Wire",
+				"resolution": "9-12 bit"
+			},
+			"compatibleWidgets": [
+				"1-Wire Hub",
+				"Thermostat Module",
+				"Data Logger",
+				"Weather Station"
+			]
+		}
+	]
+}
