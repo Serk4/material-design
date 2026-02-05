@@ -22,8 +22,7 @@ import {
   Brightness4, 
   Brightness7,
   Favorite,
-  Share,
-  ExpandMore
+  ArrowForward
 } from '@mui/icons-material'
 import FeatureShowcaseCard from './components/FeatureShowcaseCard.jsx'
 import ColorPaletteDisplay from './components/ColorPaletteDisplay.jsx'
