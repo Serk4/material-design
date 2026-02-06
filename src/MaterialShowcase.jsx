@@ -34,6 +34,7 @@ import FeatureShowcaseCard from './components/FeatureShowcaseCard.jsx'
 import ColorPaletteDisplay from './components/ColorPaletteDisplay.jsx'
 import ListDisplay from './components/ListDisplay.jsx'
 import GridDisplay from './components/GridDisplay.jsx'
+import CircuitBoardDisplay from './components/CircuitBoardDisplay.jsx'
 
 const MaterialShowcase = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
@@ -138,6 +139,7 @@ const MaterialShowcase = () => {
               >
                 <Tab label="Showcase" value="showcase" />
                 <Tab label="Display Components" value="display" />
+                <Tab label="Interactive Display" value="circuit" />
               </Tabs>
             </Box>
           </Paper>
@@ -191,7 +193,7 @@ const MaterialShowcase = () => {
                 </Box>
               </Paper>
             </>
-          ) : (
+          ) : mainView === 'display' ? (
             <>
               {/* Display Components Content */}
               <Paper elevation={1} sx={{ p: 3, mb: 3 }}>            
@@ -219,6 +221,13 @@ const MaterialShowcase = () => {
               {/* Full Page Display Component */}
               <Box sx={{ minHeight: '60vh' }}>
                 {displayMode === 'list' ? <ListDisplay /> : <GridDisplay />}
+              </Box>
+            </>
+          ) : (
+            <>
+              {/* Circuit Board Content */}
+              <Box sx={{ minHeight: '60vh' }}>
+                <CircuitBoardDisplay />
               </Box>
             </>
           )}

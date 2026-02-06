@@ -1,0 +1,214 @@
+{
+	"circuitBoards": [
+		{
+			"id": "CB001",
+			"name": "LED Controller Board",
+			"description": "Simple LED control circuit with buttons and resistors",
+			"width": 400,
+			"height": 300,
+			"components": [
+				{
+					"id": "R1",
+					"type": "resistor",
+					"name": "220Ω Resistor",
+					"value": "220Ω",
+					"description": "Current limiting resistor for LED",
+					"x": 50,
+					"y": 100,
+					"width": 40,
+					"height": 15,
+					"color": "#8B4513"
+				},
+				{
+					"id": "R2",
+					"type": "resistor",
+					"name": "10kΩ Resistor",
+					"value": "10kΩ",
+					"description": "Pull-up resistor for button",
+					"x": 150,
+					"y": 80,
+					"width": 40,
+					"height": 15,
+					"color": "#8B4513"
+				},
+				{
+					"id": "LED1",
+					"type": "led",
+					"name": "Red LED",
+					"value": "5mm Red LED",
+					"description": "Status indicator LED",
+					"x": 100,
+					"y": 150,
+					"width": 20,
+					"height": 20,
+					"color": "#FF0000"
+				},
+				{
+					"id": "LED2",
+					"type": "led",
+					"name": "Green LED",
+					"value": "5mm Green LED",
+					"description": "Power indicator LED",
+					"x": 200,
+					"y": 150,
+					"width": 20,
+					"height": 20,
+					"color": "#00FF00"
+				},
+				{
+					"id": "SW1",
+					"type": "button",
+					"name": "Push Button",
+					"value": "Tactile Switch",
+					"description": "Control button for LED",
+					"x": 300,
+					"y": 120,
+					"width": 30,
+					"height": 30,
+					"color": "#333333"
+				},
+				{
+					"id": "C1",
+					"type": "capacitor",
+					"name": "100µF Capacitor",
+					"value": "100µF",
+					"description": "Power supply filtering capacitor",
+					"x": 250,
+					"y": 80,
+					"width": 25,
+					"height": 35,
+					"color": "#1E90FF"
+				},
+				{
+					"id": "IC1",
+					"type": "ic",
+					"name": "555 Timer",
+					"value": "NE555",
+					"description": "Timer IC for LED blinking",
+					"x": 120,
+					"y": 200,
+					"width": 50,
+					"height": 30,
+					"color": "#000000"
+				}
+			]
+		},
+		{
+			"id": "CB002",
+			"name": "Sensor Interface Board",
+			"description": "Temperature sensor interface with amplification",
+			"width": 450,
+			"height": 320,
+			"components": [
+				{
+					"id": "U1",
+					"type": "ic",
+					"name": "Op-Amp",
+					"value": "LM358",
+					"description": "Operational amplifier for signal conditioning",
+					"x": 200,
+					"y": 150,
+					"width": 40,
+					"height": 30,
+					"color": "#000000"
+				},
+				{
+					"id": "R3",
+					"type": "resistor",
+					"name": "1kΩ Resistor",
+					"value": "1kΩ",
+					"description": "Feedback resistor for amplifier",
+					"x": 150,
+					"y": 100,
+					"width": 40,
+					"height": 15,
+					"color": "#8B4513"
+				},
+				{
+					"id": "R4",
+					"type": "resistor",
+					"name": "10kΩ Resistor",
+					"value": "10kΩ",
+					"description": "Input bias resistor",
+					"x": 100,
+					"y": 180,
+					"width": 40,
+					"height": 15,
+					"color": "#8B4513"
+				},
+				{
+					"id": "C2",
+					"type": "capacitor",
+					"name": "22µF Capacitor",
+					"value": "22µF",
+					"description": "Bypass capacitor for op-amp",
+					"x": 300,
+					"y": 120,
+					"width": 25,
+					"height": 35,
+					"color": "#1E90FF"
+				},
+				{
+					"id": "C3",
+					"type": "capacitor",
+					"name": "0.1µF Capacitor",
+					"value": "0.1µF",
+					"description": "Decoupling capacitor",
+					"x": 350,
+					"y": 160,
+					"width": 20,
+					"height": 30,
+					"color": "#FFD700"
+				},
+				{
+					"id": "D1",
+					"type": "diode",
+					"name": "Schottky Diode",
+					"value": "1N5819",
+					"description": "Reverse polarity protection",
+					"x": 80,
+					"y": 120,
+					"width": 30,
+					"height": 15,
+					"color": "#FF6347"
+				},
+				{
+					"id": "Q1",
+					"type": "transistor",
+					"name": "NPN Transistor",
+					"value": "2N2222",
+					"description": "Output driver transistor",
+					"x": 280,
+					"y": 200,
+					"width": 25,
+					"height": 35,
+					"color": "#2F4F4F"
+				},
+				{
+					"id": "TH1",
+					"type": "sensor",
+					"name": "Temperature Sensor",
+					"value": "LM35",
+					"description": "Analog temperature sensor",
+					"x": 50,
+					"y": 250,
+					"width": 35,
+					"height": 25,
+					"color": "#8A2BE2"
+				},
+				{
+					"id": "J1",
+					"type": "connector",
+					"name": "Output Connector",
+					"value": "3-Pin Header",
+					"description": "Output connection header",
+					"x": 380,
+					"y": 220,
+					"width": 15,
+					"height": 40,
+					"color": "#32CD32"
+				}
+			]
+		}
+	]
+}

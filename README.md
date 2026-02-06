@@ -15,6 +15,9 @@ A beautiful Single Page Application (SPA) showcasing Google's Material Design pr
 - 📋 **Dual Display Modes** - Switch between List and Grid views with navigation tabs
 - 💬 **Modal Details** - Click-to-view detailed product information
 - 🏷️ **Order Management** - Automatic order number updates during reordering
+- 🔌 **Interactive Circuit Board Explorer** - Visual circuit board with clickable components
+- 🎯 **Component Highlighting** - Select components to highlight on circuit board with golden glow
+- 📊 **Multi-Board Selection** - Choose between different circuit board designs
 
 ## Tech Stack
 
@@ -81,9 +84,11 @@ material-design/
 │   │   ├── FeatureShowcaseCard.jsx    # Feature card component
 │   │   ├── ColorPaletteDisplay.jsx    # Color palette component
 │   │   ├── ListDisplay.jsx            # Electronic parts list view with drag-drop
-│   │   └── GridDisplay.jsx            # Electronic parts grid view with drag-drop
+│   │   ├── GridDisplay.jsx            # Electronic parts grid view with drag-drop
+│   │   └── CircuitBoardDisplay.jsx    # Interactive circuit board explorer
 │   ├── data/
-│   │   └── productsData.json          # Electronic parts catalog data
+│   │   ├── productsData.json          # Electronic parts catalog data
+│   │   └── circuitBoardsData.json     # Circuit board and component data
 │   ├── MaterialShowcase.jsx           # Main app component with navigation
 │   └── main.jsx                       # Application entry point
 ├── index.html                         # HTML template
@@ -101,6 +106,7 @@ The main application component featuring:
 - Welcome section with navigation tabs
 - Showcase mode: Feature cards grid, color palette, interactive components
 - Display Components mode: Electronic parts catalog with list/grid toggle
+- Interactive Display mode: Circuit board explorer with component highlighting
 
 ### Electronic Parts Catalog
 
@@ -119,6 +125,24 @@ The main application component featuring:
 - Technical specifications and compatible widgets arrays
 - JSON-based data structure mimicking database fetch
 
+### Interactive Circuit Board Explorer
+
+**CircuitBoardDisplay Component:**
+
+- Visual SVG-based circuit board with realistic green PCB design
+- Clickable electronic components with highlighting effects
+- Component selection from sidebar list with type-specific icons
+- Real-time component details display with specifications
+- Multi-board selection between different circuit designs
+
+**Circuit Board Features:**
+
+- **LED Controller Board** - 7 components including resistors, LEDs, buttons, capacitors, and timer IC
+- **Sensor Interface Board** - 9 components including op-amps, sensors, transistors, and connectors
+- **Golden highlighting** effect when components are selected
+- **Component positioning** with X,Y coordinate tracking
+- **Type-based color coding** for different component categories
+
 ### FeatureShowcaseCard
 
 Reusable card component with hover effects and action buttons.
@@ -133,6 +157,7 @@ Visual display of Material Design color palette with all theme colors.
 
 - **Showcase Tab**: View the original Material Design component demonstrations
 - **Display Components Tab**: Access the electronic parts catalog
+- **Interactive Display Tab**: Explore interactive circuit boards with component highlighting
 - Switch between List and Grid views using the toggle buttons
 
 ### Drag & Drop
@@ -146,6 +171,14 @@ Visual display of Material Design color palette with all theme colors.
 - Click any product item to view detailed specifications
 - Modal dialogs show pricing, stock, technical specs, and compatible widgets
 - Responsive layout adapts to screen size
+
+### Interactive Circuit Board
+
+- Select circuit board from dropdown menu (LED Controller or Sensor Interface)
+- Click components on the circuit board or in the component list to highlight
+- View detailed component information in the right panel
+- Components display with realistic colors and positioning on green PCB
+- Golden glow effect indicates selected components
 
 ## License
 
