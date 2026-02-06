@@ -2,6 +2,12 @@
 
 A beautiful Single Page Application (SPA) showcasing Google's Material Design principles, built with React, Vite, and Material-UI (MUI). Features an interactive electronic parts catalog with drag-and-drop functionality.
 
+## 🌐 Live Demo
+
+**[View Live Application](https://material-design-ten.vercel.app/)**
+
+The application is deployed on Vercel and showcases all Material Design features including interactive components, drag-and-drop catalog, and circuit board explorer.
+
 ## Features
 
 - 🎨 **Material Design Components** - Comprehensive showcase of MUI components
@@ -26,6 +32,14 @@ A beautiful Single Page Application (SPA) showcasing Google's Material Design pr
 - **Material-UI v7** - Comprehensive React component library
 - **Emotion** - CSS-in-JS styling solution
 - **@hello-pangea/dnd** - Beautiful drag and drop for lists
+
+## 🚀 Deployment
+
+The application is deployed on **Vercel** with automatic deployments from the main branch.
+
+- **Live URL:** https://material-design-ten.vercel.app/
+- **Platform:** Vercel
+- **Auto-deploy:** ✅ Connected to GitHub repository
 
 ## Getting Started
 
