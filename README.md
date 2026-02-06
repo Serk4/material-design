@@ -9,7 +9,6 @@ A beautiful Single Page Application (SPA) showcasing Google's Material Design pr
 ![Vite](https://img.shields.io/badge/vite-7.3-646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-
 ## 🌐 Live Demo
 
 **[View Live Application](https://material-design-ten.vercel.app/)**
@@ -214,4 +213,4 @@ Visual display of Material Design color palette with all theme colors.
 
 ## License
 
-ISC
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
