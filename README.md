@@ -23,7 +23,7 @@ _Main application interface showcasing Material Design components and dark/light
 
 ## 🎬 Demo
 
-![Material Design Demo](assets/demo-dnd.gif)
+![Material Design Demo](assets/drag-drop-demo.gif)
 _Interactive demonstration of drag-and-drop and reorder feature_
 
 ## Features
