@@ -23,7 +23,7 @@ _Main application interface showcasing Material Design components and dark/light
 
 ## 🎬 Demo
 
-![Material Design Demo](assets/demo.gif)
+![Material Design Demo](assets/demo-dnd.gif)
 _Interactive demonstration of drag-and-drop catalog and circuit board explorer_
 
 ## Features
