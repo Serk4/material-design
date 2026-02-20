@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { 
   ThemeProvider, 
-  createTheme, 
   CssBaseline,
   Box,
   AppBar,
@@ -20,7 +19,11 @@ import {
   Tabs,
   Tab,
   ToggleButton,
-  ToggleButtonGroup
+  ToggleButtonGroup,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel
 } from '@mui/material'
 import { 
   Brightness4, 
@@ -28,43 +31,31 @@ import {
   Favorite,
   ArrowForward,
   List,
-  GridView
+  GridView,
+  Palette
 } from '@mui/icons-material'
 import FeatureShowcaseCard from './components/FeatureShowcaseCard.jsx'
 import ColorPaletteDisplay from './components/ColorPaletteDisplay.jsx'
 import ListDisplay from './components/ListDisplay.jsx'
 import GridDisplay from './components/GridDisplay.jsx'
 import CircuitBoardDisplay from './components/CircuitBoardDisplay.jsx'
+import { createCustomTheme, availableThemes } from './themes/index.js'
 
 const MaterialShowcase = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   const [displayMode, setDisplayMode] = useState('list')
   const [mainView, setMainView] = useState('showcase')
+  const [selectedTheme, setSelectedTheme] = useState('material')
   
-  const customTheme = createTheme({
-    palette: {
-      mode: isDarkTheme ? 'dark' : 'light',
-      primary: {
-        main: '#1976d2',
-        light: '#42a5f5',
-        dark: '#1565c0',
-      },
-      secondary: {
-        main: '#dc004e',
-        light: '#f50057',
-        dark: '#c51162',
-      },
-    },
-    typography: {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      h3: {
-        fontWeight: 600,
-      },
-    },
-  })
+  // Create the theme using our flexible theme system
+  const customTheme = createCustomTheme(selectedTheme, isDarkTheme)
 
   const toggleThemeMode = () => {
     setIsDarkTheme(prevMode => !prevMode)
+  }
+
+  const handleThemeChange = (event) => {
+    setSelectedTheme(event.target.value)
   }
 
   const handleDisplayModeChange = (event, newMode) => {
@@ -104,6 +95,42 @@ const MaterialShowcase = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Material Design Gallery
             </Typography>
+            
+            {/* Theme Selector */}
+            <FormControl sx={{ mr: 2, minWidth: 120 }} size="small">
+              <InputLabel sx={{ color: 'inherit' }}>Theme</InputLabel>
+              <Select
+                value={selectedTheme}
+                onChange={handleThemeChange}
+                label="Theme"
+                sx={{ 
+                  color: 'inherit',
+                  '.MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(255, 255, 255, 0.23)',
+                  },
+                  '&:hover .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(255, 255, 255, 0.5)',
+                  },
+                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(255, 255, 255, 0.8)',
+                  },
+                  '.MuiSvgIcon-root': {
+                    color: 'inherit',
+                  }
+                }}
+              >
+                {Object.entries(availableThemes).map(([key, theme]) => (
+                  <MenuItem key={key} value={key}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      <Palette sx={{ fontSize: '1rem' }} />
+                      {theme.name}
+                    </Box>
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            
+            {/* Dark/Light Mode Toggle */}
             <FormControlLabel
               control={
                 <Switch
@@ -121,11 +148,16 @@ const MaterialShowcase = () => {
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
             <Typography variant="h3" gutterBottom color="primary">
-              Welcome to Material Design
+              MUI Theme Gallery
             </Typography>
             <Typography variant="body1" paragraph>
-              Experience the beauty of Google's Material Design system through this 
-              interactive showcase built with React, Vite, and MUI components.
+              Explore MUI's powerful theming system and React component library 
+              through this interactive showcase. Discover how flexible design tokens, 
+              typography scales, and component customization create cohesive user experiences.
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+              Current Theme: <strong>{availableThemes[selectedTheme].name}</strong> • 
+              Mode: <strong>{isDarkTheme ? 'Dark' : 'Light'}</strong>
             </Typography>
             
             {/* Main Navigation */}
